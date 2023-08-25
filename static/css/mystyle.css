@@ -1,0 +1,13 @@
+.main-link{
+    text-decoration: none;
+    color: black;
+}
+
+.main-link:visited{
+    color: black;
+}
+
+.service{
+    font-size: 25px;
+    font-weight: bold;
+}

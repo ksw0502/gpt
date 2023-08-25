@@ -1,0 +1,18 @@
+{% extends 'selfchatgpt\template.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="/static/selfchatgpt/styleresult.css" />
+<form action="chat" method="post" enctype="application/x-www-form-urlencoded">
+  {% csrf_token %}
+  <div id="request">
+    <img src="{% static 'selfchatgpt/gptimage.jfif' %}" alt="gptimage">
+    <label id="label"><h1><strong>ChatGPT에게 요청하기</strong></h1></label>
+    <textarea id="question" name="question">{{question}}</textarea>
+    <input type="submit" id="text-button" value="요청하기">
+  </div>
+</form>
+<div id="response">
+  <label><h2><strong>응답</strong></h2></label>
+  <textarea id="result" readonly>{{result}}</textarea>
+</div>
+{% endblock %}
